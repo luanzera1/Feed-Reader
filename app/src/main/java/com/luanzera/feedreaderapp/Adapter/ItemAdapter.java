@@ -44,7 +44,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> {
             @Override
             public void onClick(View view) {
                 Common.currentItem = itemList.get(position);
-                context.startActivity(new Intent(context, WebActivity.class));
+                Intent openWeb = new Intent(context, WebActivity.class);
+                openWeb.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(openWeb);
             }
         });
 
