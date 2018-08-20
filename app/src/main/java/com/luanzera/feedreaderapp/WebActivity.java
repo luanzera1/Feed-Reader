@@ -64,13 +64,22 @@ public class WebActivity extends AppCompatActivity {
             case R.id.openWebNavigator:
                 openInWebNavigator(Common.currentItem.getLink());
                 break;
+            case R.id.shareURL:
+                shareURL(Common.currentItem.getLink());
             default:
                 break;
         }
-        return true;
+        return false;
     }
 
     private void openInWebNavigator(String url) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+    }
+
+    private void shareURL(String url) {
+        Intent shareUrl = new Intent(Intent.ACTION_SEND);
+        shareUrl.setType("text/plain");
+        shareUrl.putExtra(Intent.EXTRA_TEXT, url);
+        startActivity(Intent.createChooser(shareUrl, "Compartilhar"));
     }
 }

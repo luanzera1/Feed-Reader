@@ -8,4 +8,10 @@
         android:orderInCategory="100"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/shareURL"
+        android:title="Compartilhar"
+        android:orderInCategory="200"
+        app:showAsAction="never"/>
+
 </menu>
