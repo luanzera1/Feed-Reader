@@ -38,4 +38,7 @@ dependencies {
     //Paper
     implementation 'io.paperdb:paperdb:2.6'
 
+    //EasySplashScreen
+    implementation 'gr.pantrif:easy-android-splash-screen:0.0.1'
+
 }
